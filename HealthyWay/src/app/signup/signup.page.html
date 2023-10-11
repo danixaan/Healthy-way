@@ -1,0 +1,53 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-black" [routerLink]="['/bienvenido']"></ion-icon>
+      <div id="logo">
+        <img alt="" src="assets/img/icon.jpg" />
+      </div>
+      <div></div>
+    </div>
+
+    <h1>Registrar</h1>
+    <p>HEALTHYWAY <br /> App Numero #1 </p>
+  </div>
+
+
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-item>
+          <ion-icon name="person"></ion-icon>
+          <ion-input type="text" placeholder="Nombre usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-input type="text" placeholder="Correo Electronico"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-input type="password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+
+        
+    
+        <ion-button [routerLink]="['/login']" color="customer1" expand="block"> Registrar</ion-button>
+
+        <ion-modal trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]"
+      handleBehavior="cycle">
+      <ng-template>
+        <ion-content class="ion-padding">
+          <div class="ion-margin-top bttn1">
+            <p>Presione el boton para iniciar sesión</p>
+            <ion-button [routerLink]="['/login']" color="custom1" class="ion-text-center">Iniciar sesión</ion-button>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+</ion-content>

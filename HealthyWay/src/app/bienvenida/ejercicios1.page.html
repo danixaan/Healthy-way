@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="custom1">
+    
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <img alt="Silhouette of mountains" src="assets/img/back.webp" />
+      <ion-card-title class="txt1"><p>¡Bienvenido!</p></ion-card-title>
+      <ion-card-subtitle  class="txt1">En Healthy Way queremos invitarte a formar parte de nuestra comunidad fitness en la que tendras acceso a diferentes rutinas de ejercicios 
+        y dietas saludables, para acceder a esto y mas deber seleccionar el boton "Registrarse" de aqui abajo.
+      </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content class="txt2">
+      No esperes mas y da el cambio que tu cuerpo necesita.
+    </ion-card-content>
+  <div class="bttn1">
+    <ion-button class="btn" [routerLink]="['/signup']" color="custom1">Registrarse</ion-button>
+  </div>
+  </ion-card>
+</ion-content>
