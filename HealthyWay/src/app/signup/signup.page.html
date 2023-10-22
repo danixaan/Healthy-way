@@ -32,8 +32,11 @@
             <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
           </ion-item>
           <br>
-          <ion-button (click)="guardar()">Registrarse
+          <ion-button (click)="guardar()" color="custom1" expand="block"  >Registrarse
           </ion-button>
+          <br>
+      
+          <ion-button (click)="volverLogin()" color="medium" expand="block"   >Ingresar</ion-button>
 
 
           <ion-modal trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]"handleBehavior="cycle"> </ion-modal>

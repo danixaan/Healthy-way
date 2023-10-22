@@ -7,6 +7,7 @@ import {
   FormBuilder
 } from '@angular/forms';
 import { AlertController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 
@@ -22,7 +23,8 @@ export class LoginPage implements OnInit {
 
   constructor(public fb: FormBuilder,
     public alertController: AlertController,
-    public navControll : NavController
+    public navControll : NavController,
+    private router: Router
     ) {
     
     this.formularioLogin = this.fb.group({
@@ -53,4 +55,11 @@ export class LoginPage implements OnInit {
       await alert.present();
     }
   }
+
+  volverRegistro() {
+    this.router.navigate(['/signup']);
+  }
+
+
+
 }

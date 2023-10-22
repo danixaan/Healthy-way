@@ -8,6 +8,7 @@ import { AlimentacionPageRoutingModule } from './alimentacion-routing.module';
 
 import { AlimentacionPage } from './alimentacion.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +16,7 @@ import { AlimentacionPage } from './alimentacion.page';
     IonicModule,
     AlimentacionPageRoutingModule
   ],
-  declarations: [AlimentacionPage]
+  declarations: [AlimentacionPage],
+  
 })
 export class AlimentacionPageModule {}

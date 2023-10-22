@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -12,7 +13,13 @@ export class AppComponent {
     { title: 'Caminar', url: '/caminar', icon: 'walk' },
   ];
   public labels = [];
-  constructor() {}
+  constructor(private router:Router) {}
+
+  cerrarSesion(){
+    localStorage.removeItem('ingresado');
+    this.router.navigate(["/login"]);
+  }
+
 }
 
 
