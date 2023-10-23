@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="custom2">Ingresar Nueva Receta</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="foods.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ingredientes</ion-label>
+      <ion-input [(ngModel)]="foods.ingredientes"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Calorias</ion-label>
+      <ion-input [(ngModel)]="foods.calorias"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button (click)="updateFod()" expand="block"  color="success" shape="round">
+            Guardar Cambio
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

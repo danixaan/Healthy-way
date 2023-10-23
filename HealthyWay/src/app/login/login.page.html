@@ -16,24 +16,30 @@
 
 
   <div class="wrapper">
+
     <ion-card class="form-wrapper">
       <ion-card-content>
-        <ion-item>
-          <ion-icon name="person"></ion-icon>
-          <ion-input type="text" placeholder="Usuario"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="mail"></ion-icon>
-          <ion-input type="text" placeholder="Correo"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="lock-closed"></ion-icon>
-          <ion-input type="password" placeholder="Password"></ion-input>
-        </ion-item>
-        <ion-button [routerLink]="['/home']" color="customer1" expand="block"> Sing Up</ion-button>
+        <form [formGroup]="formularioLogin">  
+          <ion-item>
+            <ion-label position="floating"> Nombre </ion-label>
+            <ion-input  type="text" placeholder="Usuario" formControlName="nombre"> </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating"> password </ion-label>
+            <ion-input placeholder="Password" formControlName="password" type="password"> </ion-input>
+          </ion-item>
+        </form>
+        <br>
+        <ion-button (click)="ingresar()" color="custom1" expand="block">
+          Ingresar
+        </ion-button>
+
+        <br>
+       
+
+        <ion-button (click)="volverRegistro()" color="medium" expand="block"  >Registro</ion-button>
       </ion-card-content>
     </ion-card>
-
 
     <div class="line-text">
       <span class="line"></span>
@@ -43,13 +49,13 @@
     <ion-card class="social-wrapper">
       <ion-card-content>
         <div class="social">
-          <ion-button name="btn-fb">
+          <ion-button class="btn-fb">
             <ion-icon name="logo-facebook"></ion-icon>
           </ion-button>
-          <ion-button name="btn-tw">
+          <ion-button class="btn-tw">
             <ion-icon name="logo-twitter"></ion-icon>
           </ion-button>
-          <ion-button name="btn-go">
+          <ion-button class="btn-go">
             <ion-icon name="logo-google"></ion-icon>
           </ion-button>
         </div>
@@ -57,3 +63,11 @@
     </ion-card>
   </div>
 </ion-content>
+
+
+
+
+
+
+
+

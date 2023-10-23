@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -9,10 +11,17 @@ export class AppComponent {
     { title: 'Home', url: '/home', icon: 'home' },
     { title: 'Ejercicios', url: '/ejercicios', icon: 'barbell' },
     { title: 'Alimentacion', url: '/alimentacion', icon: 'nutrition' },
-    { title: 'Caminar', url: '/caminar', icon: 'walk' },
+    { title: 'Gyms', url: '/caminar', icon: 'map' },
   ];
   public labels = [];
-  constructor() {}
+  constructor(private router:Router) {}
+
+  cerrarSesion(){
+    localStorage.removeItem('ingresado');
+    this.router.navigate(["/login"]);
+  }
+
+
 }
 
 
